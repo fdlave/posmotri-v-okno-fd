@@ -8,7 +8,6 @@ html {
   block-size: 100%;
 }
 
-
 .page {
   display: flex;
   inline-size: 1200px;
@@ -45,6 +44,7 @@ ol {
   display: grid;
   gap: 30px;
   align-items: end;
+  justify-content: center;
   grid-template-areas: "result details";
   max-width: 1140px;
   margin: 0 30px;
@@ -104,8 +104,8 @@ ol {
   text-decoration: underline;
 }
 
-.search-form__label-text {
-
+.search-form__label-text:hover {
+  
 }
 
 .visually-hidden {
@@ -121,8 +121,7 @@ ol {
 .search-form__textfield {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
-  border-left: none;
-  border-right: none;
+  border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   line-height: 22px;
@@ -134,6 +133,10 @@ ol {
 
 .search-form__textfield:focus {
   outline: none;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.70); 
 }
 
 .search-form__checkbox-list {
@@ -161,7 +164,6 @@ ol {
 .search-form__submit-button {
   align-self: flex-end;
   width: 194px;
-  height: 34px;
 }
 
 .content__details {
@@ -170,7 +172,7 @@ ol {
   width: 100%;
   height: 100%;
   grid-area: details;
-  gap: 26px;
+  gap: 22px;
 }
 
 .title {
@@ -188,21 +190,19 @@ ol {
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: 298px;
+  height: 298px;
+  
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
-.cards-list-item-template{
-
-}
-
-.content__list-item:not(:last-child) {
-  padding: 3px;
-  margin-bottom: 30px;
+.content__list-item {
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
 .content__card-link {
@@ -235,23 +235,25 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  max-width: 196px;
 }
 
 .content__video-card-title {
   font-size: 30px;
-  padding-block-end: 6px;
-  font-weight: 400;
+  font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: Oswald, sans-serif;
-  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase; 
 }
 
 .content__video-card-description {
   line-height: 16.2px;
   font-size: 18px;
-  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  font-weight: 400;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .content__video-card-thumbnail {
@@ -272,8 +274,9 @@ ol {
   background-color: transparent;
   color: #fff;
   font-weight: 700;
-  height: 34px;
   cursor: pointer;
+  padding: 6px 0;
+  text-align: center;
 }
 
 .button:active {
