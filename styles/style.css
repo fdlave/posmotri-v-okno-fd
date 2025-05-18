@@ -100,7 +100,7 @@ ol {
   outline: 1px solid #fff;
 }
 
-.search-form__label:hover {
+.search-form__label:hover:not(:has(.search-form__textfield)) {
   text-decoration: underline;
 }
 
@@ -129,17 +129,14 @@ ol {
   color: #fff;
   background-color: transparent;
   appearance: none;
-  
 }
-
-
 
 .search-form__textfield:focus {
   outline: none;
 }
 
 .search-form__textfield::placeholder {
-  color: rgba(255, 255, 255, 0.70); 
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .search-form__checkbox-list {
@@ -194,7 +191,6 @@ ol {
   overflow-y: auto;
   overflow-x: hidden;
   height: 298px;
-  
 }
 
 .content__list {
@@ -215,7 +211,7 @@ ol {
 }
 
 .content__card-link:hover {
-  text-decoration: underline;
+  text-decoration: underline 2px solid #fff;
 }
 
 .content__card-link:focus {
@@ -247,8 +243,8 @@ ol {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase; 
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 
 .content__video-card-description {
