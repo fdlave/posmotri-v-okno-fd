@@ -104,8 +104,8 @@ ol {
   text-decoration: underline;
 }
 
-.search-form__label-text:hover {
-  
+.search-form__label-text:active {
+  outline: none;
 }
 
 .visually-hidden {
@@ -129,7 +129,10 @@ ol {
   color: #fff;
   background-color: transparent;
   appearance: none;
+  
 }
+
+
 
 .search-form__textfield:focus {
   outline: none;
@@ -251,7 +254,12 @@ ol {
 .content__video-card-description {
   line-height: 16.2px;
   font-size: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-weight: 400;
   font-family: "Fira Sans Condensed", sans-serif;
 }
@@ -261,10 +269,6 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
-}
-
-.more-button-template {
-
 }
 
 .button {
@@ -298,6 +302,7 @@ ol {
 
 .more-button {
   width: 100%;
+  margin-top: 30px;
 }
 
 /* Кастомный скроллбар */
